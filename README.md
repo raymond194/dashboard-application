@@ -34,3 +34,4 @@ git clone https://github.com/raymond194/dashboard-application.git
 cd dashboard-application
 npm install
 npm run dev
+**Hosted URL:** [https://dashboard-application-kappa.vercel.app](https://dashboard-application-kappa.vercel.app)
