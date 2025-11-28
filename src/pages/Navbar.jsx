@@ -10,11 +10,15 @@ const Navbar = () => {
   const pathnames = location.pathname.split("/").filter(Boolean);
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef();
-    const buttonRef = useRef(null);
+  const buttonRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && buttonRef.current&&
-        !buttonRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
         setOpen(false);
       }
     };
@@ -24,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="relative flex justify-between items-center bg-gray-800 p-4 shadow text-white rounded border-b border-gray-500 w-full" >
+    <div className="relative flex justify-between items-center bg-gray-800 p-4 shadow text-white rounded border-b border-gray-500 w-full">
       <h1 className="text-xl font-bold text-grey-800 cursor-pointer ">
         Dashboard / {pathnames.length === 0 ? "Home" : pathnames.join(" / ")}
       </h1>

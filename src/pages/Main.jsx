@@ -7,7 +7,7 @@ import Users1 from "../routes/Users1";
 
 const Main = () => {
   return (
-    <div className="flex-1 bg-gray-800 border-t border-gray-500 h-screen">
+    <div className="flex-1 bg-gray-800 border-t border-gray-500 h-screen overflow-x-hidden">
       <Navbar />
 
       <Routes>
